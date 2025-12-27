@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "schedule": "Schedule",
+    "admin": "Admin"
+  },
+  "hero": {
+    "title": "Find Your Balance with Tim",
+    "subtitle": "Discover the practice of mindful movement",
+    "cta": "Book a Class"
+  },
+  "about": {
+    "title": "About Tim",
+    "placeholder": "Certified yoga instructor passionate about helping students discover balance, strength, and inner peace through mindful practice.",
+    "readMore": "Learn More"
+  },
+  "classes": {
+    "title": "Class Options",
+    "group": {
+      "title": "Group Classes",
+      "desc": "Build community in a welcoming environment"
+    },
+    "private": {
+      "title": "Private Sessions",
+      "desc": "Personalized attention, custom practice"
+    },
+    "recurring": {
+      "title": "Drop-in Classes",
+      "desc": "Flexible weekly schedule"
+    },
+    "appointment": {
+      "title": "By Appointment",
+      "desc": "One-on-one at your convenience"
+    },
+    "pricing": "Contact for rates"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "instagram": "Follow on Instagram",
+    "telegram": "Message on Telegram"
+  },
+  "booking": {
+    "title": "Book a Class",
+    "selectClass": "Select a Class",
+    "name": "Your Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "notes": "Notes (optional)",
+    "submit": "Confirm Booking",
+    "success": "Booking Confirmed!",
+    "successMessage": "Check your email for confirmation details."
+  },
+  "admin": {
+    "login": "Admin Login",
+    "username": "Username",
+    "password": "Password",
+    "dashboard": "Dashboard",
+    "calendar": "Calendar",
+    "classes": "Manage Classes",
+    "bookings": "Bookings"
+  }
+}

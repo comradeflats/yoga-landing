@@ -1,26 +1,49 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafaf9;
+  --foreground: #1c1917;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Calm colors */
+  --color-calm-50: #fafaf9;
+  --color-calm-100: #f5f5f4;
+  --color-calm-200: #e7e5e4;
+  --color-calm-300: #d6d3d1;
+  --color-calm-400: #a8a29e;
+  --color-calm-500: #78716c;
+  --color-calm-600: #57534e;
+  --color-calm-700: #44403c;
+  --color-calm-800: #292524;
+  --color-calm-900: #1c1917;
+
+  /* Beige colors */
+  --color-beige-50: #faf8f5;
+  --color-beige-100: #f5f1ea;
+  --color-beige-200: #e8dfd0;
+  --color-beige-300: #d9cab1;
+  --color-beige-400: #c4ad8a;
+  --color-beige-500: #b09168;
+  --color-beige-600: #9c7a55;
+  --color-beige-700: #7e6246;
+  --color-beige-800: #675140;
+  --color-beige-900: #574538;
+
+  /* Accent colors */
+  --color-accent: #a8a29e;
+  --color-accent-light: #d6d3d1;
+  --color-accent-dark: #78716c;
+
+  --font-sans: var(--font-geist-sans), Inter, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }

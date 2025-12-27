@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String    @id @default(cuid())
+  email     String    @unique
+  name      String
+  phone     String?
+  createdAt DateTime  @default(now())
+  bookings  Booking[]
+}
+
+model ClassSchedule {
+  id          String    @id @default(cuid())
+  type        String    // "group", "private", "recurring", "appointment"
+  titleEn     String
+  titleRu     String
+  descEn      String?
+  descRu      String?
+  dayOfWeek   Int?      // 0-6 for recurring classes (null for appointments)
+  startTime   String    // "09:00"
+  duration    Int       // minutes
+  capacity    Int       // max students (1 for private)
+  isActive    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  bookings    Booking[]
+}
+
+model Booking {
+  id           String          @id @default(cuid())
+  userId       String
+  user         User            @relation(fields: [userId], references: [id])
+  scheduleId   String?
+  schedule     ClassSchedule?  @relation(fields: [scheduleId], references: [id])
+  date         DateTime        // Actual class date
+  startTime    String
+  duration     Int
+  type         String          // "group", "private", etc.
+  status       String          @default("confirmed") // "confirmed", "cancelled", "completed"
+  notes        String?
+  createdAt    DateTime        @default(now())
+  reminderSent Boolean         @default(false)
+}
+
+model Admin {
+  id       String @id @default(cuid())
+  username String @unique
+  password String // bcrypt hashed
+}
